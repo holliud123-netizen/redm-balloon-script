@@ -1,0 +1,131 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: transparent;
+    color: #fff;
+}
+
+.balloon-hud {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}
+
+.balloon-hud.active {
+    display: block;
+}
+
+.hud-container {
+    background: rgba(0, 0, 0, 0.85);
+    border: 3px solid #FF6B35;
+    border-radius: 15px;
+    padding: 20px;
+    min-width: 320px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 8px 32px 0 rgba(255, 107, 53, 0.4);
+    font-family: 'Courier New', monospace;
+}
+
+.hud-header {
+    border-bottom: 2px solid #FF6B35;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+
+.hud-header h2 {
+    font-size: 28px;
+    text-shadow: 0 0 15px rgba(255, 107, 53, 0.6);
+    letter-spacing: 2px;
+}
+
+.hud-info {
+    margin-bottom: 20px;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 107, 53, 0.3);
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.info-item:last-child {
+    border-bottom: none;
+}
+
+.info-item .label {
+    color: #FF6B35;
+    text-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
+}
+
+.info-item .value {
+    color: #00FF00;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+.controls-guide {
+    background: rgba(255, 107, 53, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #FF6B35;
+}
+
+.controls-guide h3 {
+    color: #FF6B35;
+    margin-bottom: 12px;
+    font-size: 16px;
+    text-shadow: 0 0 5px rgba(255, 107, 53, 0.5);
+}
+
+.controls-guide ul {
+    list-style: none;
+    font-size: 13px;
+}
+
+.controls-guide li {
+    padding: 6px 0;
+    color: #fff;
+}
+
+.controls-guide strong {
+    color: #00FF00;
+    text-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+}
+
+/* Animações */
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 15px rgba(255, 107, 53, 0.6);
+    }
+    50% {
+        text-shadow: 0 0 25px rgba(255, 107, 53, 0.9);
+    }
+}
+
+.hud-header h2 {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+.hud-container {
+    animation: slideIn 0.5s ease-out;
+}

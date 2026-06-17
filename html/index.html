@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Balão RedM - HUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="balloon-hud" id="balloonHUD">
+        <div class="hud-container">
+            <div class="hud-header">
+                <h2>🎈 BALÃO</h2>
+            </div>
+
+            <div class="hud-info">
+                <div class="info-item">
+                    <span class="label">Altitude:</span>
+                    <span class="value" id="altitude">0m</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Saúde:</span>
+                    <span class="value" id="health">100%</span>
+                </div>
+            </div>
+
+            <div class="controls-guide">
+                <h3>⌨️ CONTROLES</h3>
+                <ul>
+                    <li><strong>Q</strong> - Subir</li>
+                    <li><strong>Z</strong> - Descer</li>
+                    <li><strong>W</strong> - Mover Frente</li>
+                    <li><strong>S</strong> - Mover Trás</li>
+                    <li><strong>A/D</strong> ou <strong>←/→</strong> - Girar</li>
+                    <li><strong>G</strong> - Sair</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
