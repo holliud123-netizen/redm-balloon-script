@@ -1,8 +1,8 @@
 -- Database setup (Opcional)
 -- Se quiser usar banco de dados para rastrear quem usou o balão
+-- Este arquivo pode ser deixado vazio ou descomentado para usar MySQL
 
 -- Descomente abaixo se estiver usando MySQL
-
 --[[
 MySQL.Async.execute([[
     CREATE TABLE IF NOT EXISTS balloon_usage (
@@ -12,7 +12,7 @@ MySQL.Async.execute([[
         spawn_location VARCHAR(100),
         flight_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP
     )
-]], {})
+]])
 
 function LogBalloonUsage(identifier, username, location)
     MySQL.Async.execute(
